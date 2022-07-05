@@ -14,7 +14,7 @@ The weather data for any bigger city can be displayed when searched for by name.
 The live stock information of the three big tech companies Apple, Microsoft and IBM can be displayed.
 
 <p align="center">
-<img src="https://github.com/AndrikSeeger/Monitoring_Website/blob/main/Ressources/Stock_Info.png" width="250"/>
+<img src="https://github.com/AndrikSeeger/Monitoring_Website/blob/main/Ressources/Stock_Info.png" width="450"/>
 </p>
 
 ### Newsfeed
@@ -32,9 +32,7 @@ The layout of the website is fully responsive way down to small devices like old
 
 An exemplary video of the website displayed on a simulated smartphone screen in portrait mode:
 
-<p align="center">
 https://user-images.githubusercontent.com/72473553/177418582-60197516-ba57-44a9-97df-448faa940bdf.mov
-</p>
 
 ## Language
 A given requirement for the development of the website was the use of the German language. Hence the website is in german. 
