@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+    <title>DHBW Web Engineering Meine erste Homepage</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/DHBWWebengineering_final.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/indexStock.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/indexWeather.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/indexRss.css">
+  </head>
+
+  <body class="pagegridcontainer" style="height:100%;position:fixed">
+
+    <header class="pagegridheader flexboxheader">
+       <img
+          src="/images/logodhbw.svg" style="min-width:200px;max-width:300px;width:30%">
+       <span>DHBW Stuttgart Web Engineering Portal</span>
+    </header>
+
+    <nav class="pagegridnavigation">
+      <ul class="flexboxnav">
+        <li><a class = "navTag" href="#Informatik">Informatik</a></li>
+        <li><a class = "navTag" href="#Elektrotechnik">Elektrotechnik</a></li>
+        <li><a class = "navTag" href="#Maschinenbau">Maschinenbau</a></li>
+        <li id ="Dienste" class="Dienste"><a href="#">Dienste</a></li>
+        <li><a class = "navTag" href="#Aktien">Aktienkurse</a></li>
+        <li><a class = "navTag" href="#Wetter">Wetterdaten</a></li>
+        <li><a class = "navTag" href="#Rss">RSS-Feed</a></li>
+      </ul>
+    </nav>
+
+
+    <div id="scrollpart" class="pagegridsrcol" style="overflow:auto">
+      <div class="flexyouTube youTube">
+          <div class="card" style="position:relative; width: 80%; max-width: 600px;">
+            <div style="position:relative; width:100% height: 0; padding-bottom: 56.25%;">
+               <iframe style="position: absolute;width: 100%;height: 100%;left: 0;top: 0;" id= "myiframe"
+                src="https://youtube.com/embed/2dy9fLZEg9A">
+               </iframe>
+            </div>
+          </div>
+           <div class="card"
+                 style="cursor:pointer" onclick="this.firstElementChild.src = '/htm/css3.htm';
+                                                this.firstElementChild.style.display ='block';">
+              Die DHBW Stuttgart steht für eine einzigartige Verbindung von Theorie und Praxis:
+              Zusammen mit rund 2.000 Unternehmen und sozialen Einrichtungen (den Dualen Partnern)
+              werden über 40 anerkannte Bachelor-Studienrichtungen in den Fakultäten Wirtschaft,
+              Technik und Sozialwesen angeboten
+                <iframe id= "myiframe1" style="width:100%;display:none; width:100%; min-height:400px"></iframe>
+          </div>
+      </div>
+
+      <div class="flexFakultaet Fakultaeten card">
+          <div id="Informatik" class="FakultaetTitel">Informatik</div>
+          <div class="FakultaetBild card">
+            <img src="/images/Erdbeer-Q.jpeg"</img>
+          </div>
+        <div class="FakultaetBeschreibung card">Informatiker übertragen Vorgänge der realen Welt auf Computersysteme,
+           indem sie die Aufgabenstellung in geeignete Modelle überführen und diese dann
+           auf Softwaresystemen abbilden. Die Vielfalt an Anwendungsmöglichkeiten ist dabei
+           nahezu unbegrenzt und steigt stetig mit der zunehmenden Leistungsfähigkeit der Systeme.
+        </div>
+     </div>
+
+      <div class="flexFakultaet Fakultaeten card">
+        <div id="Elektrotechnik" class="FakultaetTitel">Elektrotechnik</div>
+        <div class="FakultaetBild card">
+          <img src="/images/Mandarinen-Q.jpeg"</img>
+        </div>
+          <div class="FakultaetBeschreibung card">
+           Die Elektrotechnik bewegt und verändert die Welt:
+             Smartphones, Assistenzsysteme, Smart Home oder Medizintechnik sind aus
+             unserem Leben nicht mehr wegzudenken, die Energiewende ist in aller Munde.
+             Ingenieurinnen und Ingenieure der Elektrotechnik gestalten und entwickeln
+             die Systeme und haben so einen direkten Einfluss auf unser alltägliches Leben.
+             Sie befassen sich nicht nur mit elektrischen und elektronischen Systemen, sondern arbeiten
+             in einem sehr vielfältigen Arbeitsfeld, das von der Entwicklung eines Produkts
+             über das Projektmanagement bis hin zu Marketing und Vertrieb reicht.
+           </div>
+      </div>
+
+      <div class="flexFakultaet Fakultaeten card">
+        <div id="Maschinenbau" class="FakultaetTitel">Maschinenbau</div>
+        <div class="FakultaetBild card">
+          <img src="/images/Pizza-Q.jpeg"</img>
+        </div>
+        <div class="FakultaetBeschreibung card">
+            Der Maschinenbau mit seinen zahlreichen Ausprägungen verknüpft Theorie
+             und Praxis, Naturwissenschaft und Technik. Die umfassende Ausbildung an
+             der Dualen Hochschule Stuttgart ermöglicht es Absolventinnen und Absolventen
+             des Studiengangs, Aufgaben in vielen Tätigkeitsfeldern zu übernehmen:
+        </div>
+      </div>
+
+      <div class="flexAktien card backblue"> <!--Section with Stock Data-->
+        <div id="Aktien" class="FakultaetTitel" >Aktien</div>
+        <input id="btnApple" type="button" value="Apple Stock" onclick="printJSON(requestData('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=AAPL&interval=5min&outputsize=compact&apikey=EUWGN433930LGALL'));" class="buttonStock buttonApple">
+        <input id="btnMicrosoft" type="button" value="Microsoft Stock" onclick="printJSON(requestData('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=MSFT&interval=5min&outputsize=compact&apikey=EUWGN433930LGALL'));" class="buttonStock buttonMicrosoft">
+        <input id="btnIBM" type="button" value="IBM Stock" onclick="printJSON(requestData('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&interval=5min&outputsize=compact&apikey=EUWGN433930LGALL'));" class="buttonStock buttonIBM">
+        <div id = "stockMsg" class="stockMsg" ></div> <!--Message displayed under the buttons-->
+       <canvas id="StockChart" width="400" height="400"></canvas><!--Where Chart will be displayed-->
+       <div id="stockInfo" class="stockInfo">
+       </div>
+      </div>
+
+      <div class="flexWetter card backyellow"> <!--Section with Weather Data-->
+        <div id="Wetter" class="FakultaetTitel spacing" >Wetter Vorhersage</div>
+        <form>
+          <input id="inputCity" type="text" placeholder="Ort eingeben" autofocus class="inputForm cityForm">
+          <input id="submit" type="button" value="Go!" class="buttonWeather" onclick="showWeather()">
+          <span class="errorSearch"></span>
+        </form>
+        <div id = "weatherMsg" class="stockMsg weatherMsg"></div> <!--Message displayed under the input field-->
+            <ul id=daysId class="days"></ul>
+     </div>
+
+    <div class="flexRss card backred"> <!--Section with RSS Feed-->
+      <div id="Rss" class="FakultaetTitel spacing" >RSS-Feed: Heise</div>
+      <div id = "rss1Msg" class="stockMsg rss1Msg"></div> <!--Possible Message displayed under the input field-->
+          <ul id=feed1Id class="feed"></ul>
+   </div>
+
+      <div style="height:100px;"></div>
+    </div>
+
+    <footer class="pagegridsfooter">Copyright &copy; DHBW Stuttgart</footer>
+    <div id="PullupOptions" style="position:fixed;left:0;display:none;background-color:white;z-index:10" class="card">
+      <button  id="PullupOptionsBtn" onclick="this.parentElement.style.display='none'">
+              <span style="font-size:1.5em; text-align: center;"> Zurück </span></button>
+      <ul class="popuplist">
+        <li id="popupli1" style="list-style-type: none; padding:15px; cursor:pointer;">Leute</li>
+        <li id="popupli2" style="list-style-type: none; padding:5px; display:flex;justify-content:space-between;align-items:flex-end;min-width:300px;">
+          <p style="margin:0.5rem;">Wikipedia Search</p>
+          <input style="margin:0.5rem;" id ="wikisearchstring"></input>
+          <button style="margin:0.5rem;" onclick="runWikiQuery();">Go</button>
+        </li>
+      </ul>
+    </div>
+
+    <div id="showwindow" style="position:fixed;left:0;top:20%;max-height:75%;overflow:auto;display:none;background-color:white;z-index:10" class="card">
+      <button type="button" id="showwindowbtn" onclick="this.parentElement.style.display='none'">
+        <span style="font-size:1.5em; text-align: center;"> Zurück </span></button>
+        <div id="showwindowData"></div>
+    </div>
+
+    <script src="/js/JavaScript2.js"></script>
+    <script>document.getElementsByTagName("BODY")[0].onload = Init;
+    </script>
+
+  </body>
+
+</html>

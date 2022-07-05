@@ -1,0 +1,68 @@
+.buttonStock /*Grundlegendes Button-Styling*/
+{
+border: none;
+color: lightblue;
+padding: 16px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+transition-duration: 0.4s;
+cursor: pointer;
+border-radius: 3px;
+font-size: 20px;
+}
+
+.buttonStock:focus { /*Grundlegendes Button-Styling im Fokusierten Zustand*/
+  background-color: pink;
+  border: 0px;
+}
+
+.buttonApple {
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50;
+}
+
+.buttonApple:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.buttonMicrosoft {
+  background-color: white;
+  color: black;
+  border: 2px solid #008CBA;
+}
+
+.buttonMicrosoft:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.buttonIBM {
+  background-color: white;
+  color: black;
+  border: 2px solid #f44336;
+}
+
+.buttonIBM:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.stockInfo /*Styling für Daten zu Aktie*/
+{
+  font-size: 22px;
+  font-family: serif;
+  color: #383838;
+}
+
+.stockMsg /*Styling für Nachricht welche unter Buttons angezeigt wird*/
+{
+  color: red;
+  font-size: 16px;
+  font-weight: bolder;
+  padding-left: 20px;
+}

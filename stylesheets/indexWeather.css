@@ -1,0 +1,95 @@
+
+
+input[type=text] { /*Styling Eingabefeld*/
+  transition: all 0.5s ease-in;
+  background-color: #edffef;
+  padding: 20px 20px;
+  border: 2px lightgreen;
+  border-radius: 4px;
+  color: darkgrey;
+  font-size: 20px;
+  width: 70%;
+}
+
+input[type=text]:focus { /*Styling Eingabefeld im Fokusierten Zustand*/
+  background-color: #ccfcd2;
+}
+
+.buttonWeather /*Eingabebutton*/
+{
+border: none;
+color: lightblue;
+padding: 20px 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 25px;
+font-style: italic;
+font-family: sans-serif;
+margin: 4px 2px;
+transition-duration: 0.4s;
+cursor: pointer;
+background-color: lightgreen;
+color: white;
+border-radius: 10px;
+}
+
+.buttonWeather:hover{
+  background-color: #75FF50;
+}
+
+.buttonWeather:focus{
+  background-color: #03C300;
+}
+
+.day{ /*Einzelne Tageselemente*/
+  background-color: #D1E7F4;
+  padding: 20px 20px 20px 20px;
+  border-radius: 10px;
+  color: black;
+  font-family: sans-serif;
+}
+
+.days{ /*Alle Tageselemente*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  grid-gap: 40px 15px;
+  grid-column: 5;
+  list-style-type: none;
+}
+
+.important{ /*Hervorgehobene Texte*/
+  font-style: oblique;
+  font-size: 18px;
+  padding-bottom: 5px;
+}
+
+.date{ /*Datumsstyling*/
+  background-color: #F1A85E;
+  border-radius: 7px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.location{ /*Ortformatierung*/
+  text-align: center;
+}
+
+.weatherMsg{ /*Styling für Nachricht bei Fehler*/
+  font-family: sans-serif;
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+/*Small tablets*/
+@media only screen and (min-width: 450px) {
+  input[type=text] {
+  width: auto;}
+
+  input[type=text]:focus {
+    width: 75%;
+  }
+}
