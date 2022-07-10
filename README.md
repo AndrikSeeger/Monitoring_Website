@@ -39,8 +39,10 @@ A given requirement for the development of the website was the use of the German
   
 ## FAQ
 * **Which runtime can I use to run the website?**
+    
     You can use any supported runtime that works. The website was developed using *Note.js* so I recommend using it's runtime environment.
     
 * **Do I need special dependencies to run it?**
+    
     No, the project is written in plain *HTML, JavaScript and CSS*.
     
