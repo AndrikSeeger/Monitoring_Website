@@ -70,7 +70,7 @@ The site is fully responsive — adapting automatically to:
 * Both portrait and landscape modes
 
 🎥 **Preview video on simulated smartphone screen (portrait mode):**
-[https://user-images.githubusercontent.com/72473553/177418582-60197516-ba57-44a9-97df-448faa940bdf.mov](https://user-images.githubusercontent.com/72473553/177418582-60197516-ba57-44a9-97df-448faa940bdf.mov)
+https://user-images.githubusercontent.com/72473553/177418582-60197516-ba57-44a9-97df-448faa940bdf.mov
 
 ---
 
